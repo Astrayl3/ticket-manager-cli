@@ -38,6 +38,31 @@ program
         );
         console.log("Ticket ID created:", ticket.id);
     });
+//SHOW
+program
+    .command("show <id>")
+    .description("show ticket details")
+    .action(async(id) => {
+        const ticket = await ticketService.getTicketById(id);
+        if (ticket) {
+            console.log(ticket);
+        } else {
+            console.log("ticket not found");
+        }
+    });
+//UPDATE
+program
+    .command("update <id>")
+    .description("update ticket status")
+    .requiredOption("-s, --status <string>", "new status (OPEN, IN_PROGRESS, DONE)")
+    .action(async(id, options)  => {
+        try{
+            const updated = await ticketService.updateTicketStatus(id, options.status.toUpperCase() as any);
+            console.log("Updated ticket:", updated.status);
+        } catch (error:  any){
+            console.error("Error:", error.message);
+        }
+    })
 
-    program.parse();
+program.parse();
     

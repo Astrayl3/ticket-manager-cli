@@ -24,12 +24,12 @@
     "id": "626wr1k3c",
     "title": "Học áp dụng Hexagonal",
     "description": "Hiểu cách Hexagonal vận hành",
-    "status": "OPEN",
     "priority": "MEDIUM",
     "tags": [
       "Vận hành",
       "Lý thuyết"
     ],
-    "createdAt": "2026-02-26T03:29:05.645Z"
+    "createdAt": "2026-02-26T03:29:05.645Z",
+    "status": "DONE"
   }
 ]

@@ -7,7 +7,12 @@ export class JsonTicketRepository implements ITicketRepository {
 
     async save(ticket: Ticket): Promise<void> {
         const tickets = await this.findAll();
-        tickets.push(ticket);
+        const index = tickets.findIndex(t => t.id === ticket.id);
+        if (index !== -1){
+            tickets[index] = ticket;
+        } else{
+            tickets.push(ticket);
+        }
         await fs.writeFile(this.filePath, JSON.stringify(tickets, null, 2));
     }
 

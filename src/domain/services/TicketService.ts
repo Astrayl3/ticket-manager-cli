@@ -22,4 +22,16 @@ export class TicketService {
     async getAllTickets(): Promise<Ticket[]> {
         return await this.ticketRepository.findAll();
     }
+
+    async getTicketById(id: string): Promise<Ticket | null> {
+        return await this.ticketRepository.findById(id);
+    }
+
+    async updateTicketStatus(id: string, newStatus: TicketStatus): Promise<Ticket> {
+        const ticket = await this.ticketRepository.findById(id);
+        if (!ticket) throw  new Error("Cannot found ticket with id:" + id);
+        ticket.status = newStatus;
+        await this.ticketRepository.save(ticket);
+        return ticket;
+    }
 }
