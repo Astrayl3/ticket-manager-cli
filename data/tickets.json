@@ -1,0 +1,35 @@
+[
+  {
+    "id": "owjutt2aj",
+    "title": "Học Hexagonal Architecture",
+    "description": "Hoàn thành tuần 2 của chương trình training",
+    "status": "OPEN",
+    "priority": "HIGH",
+    "tags": [
+      "Leaning",
+      "Hexagonal Architecture"
+    ],
+    "createdAt": "2026-02-26T03:01:31.607Z"
+  },
+  {
+    "id": "vvqzhto72",
+    "title": "Học CLI",
+    "description": " ",
+    "status": "OPEN",
+    "priority": "HIGH",
+    "tags": [],
+    "createdAt": "2026-02-26T03:21:27.048Z"
+  },
+  {
+    "id": "626wr1k3c",
+    "title": "Học áp dụng Hexagonal",
+    "description": "Hiểu cách Hexagonal vận hành",
+    "status": "OPEN",
+    "priority": "MEDIUM",
+    "tags": [
+      "Vận hành",
+      "Lý thuyết"
+    ],
+    "createdAt": "2026-02-26T03:29:05.645Z"
+  }
+]
